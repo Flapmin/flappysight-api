@@ -19,18 +19,18 @@ function getUserHome() {
   return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
 }
 
-var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight');
+var home = process.env.INSIGHT_DB || (getUserHome() + '/.flappysight');
 
 if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
-  port = '3000';
+  port = '4000';
   b_port = '11555';
   p2p_port = '11556';
 } else {
   env = 'testnet';
   db = home + '/testnet';
-  port = '3001';
+  port = '4001';
   b_port = '33555';
   p2p_port = '33556';
 }
@@ -68,8 +68,8 @@ var ignoreCache = process.env.INSIGHT_IGNORE_CACHE || 0;
 
 var bitcoindConf = {
   protocol: process.env.BITCOIND_PROTO || 'http',
-  user: process.env.BITCOIND_USER || 'user',
-  pass: process.env.BITCOIND_PASS || 'pass',
+  user: process.env.BITCOIND_USER || 'flappyuser',
+  pass: process.env.BITCOIND_PASS || 'flappypass',
   host: process.env.BITCOIND_HOST || '127.0.0.1',
   port: process.env.BITCOIND_PORT || b_port,
   p2pPort: process.env.BITCOIND_P2P_PORT || p2p_port,
