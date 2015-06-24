@@ -4,18 +4,18 @@
 and websocket API. Flappysight API runs in NodeJS and uses LevelDB for storage. 
 
 This is a backend-only service. If you're looking for the web frontend application,
-take a look at https://github.com/FlappyDEV/flappysight.
+take a look at https://github.com/pembo211/flappysight.
 
 *Flappysight API* allows to develop flappycoin-related applications (such as wallets) that 
 require certain information from the blockchain that flappycoind does not provide.
 
 A blockchain explorer front-end has been developed on top of *Flappysight API*. It can
-be downloaded at [Github Flappysight Repository](https://github.com/FlappyDEV/flappysight).
+be downloaded at [Github Flappysight Repository](https://github.com/pembo211/flappysight).
 
 
 ## Prerequisites
 
-* **flappycoind** - Download and Install [Flappycoin](https://github.com/flappycoin-project/flappycoin)
+* **flappycoind** - Download and Install [Flappycoin](https://github.com/flappycoindev/flappycoin)
 
 *flappysight API* needs a *trusted* flappycoind node to run. *flappysight API* will connect to the node
 through the RPC API, flappycoin peer-to-peer protocol, and will even read its raw block .dat files for syncing.
@@ -37,7 +37,7 @@ flappycoind must be running and must have finished downloading the blockchain **
 
   To install Flappysight API, clone the main repository:
 
-    $ git clone https://github.com/FlappyDEV/flappysight-api && cd flappysight-api
+    $ git clone https://github.com/pembo211/flappysight-api && cd flappysight-api
 
   Install dependencies:
 
@@ -146,7 +146,7 @@ To run the tests
 ```$ grunt test```
 
 
-Contributions and suggestions are welcome at [flappysight-api github repository](https://github.com/FlappyDEV/flappysight-api).
+Contributions and suggestions are welcome at [flappysight-api github repository](https://github.com/pembo211/flappysight-api).
 
 ## Caching schema
 
