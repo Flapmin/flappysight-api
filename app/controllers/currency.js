@@ -39,12 +39,14 @@ exports.index = function(req, res) {
   };
 
   // Init
+  var p = '';
   var currentTime = +new Date();
   if (bitstampRate === 0 || currentTime >= (timestamp + delay)) {
     timestamp = currentTime;
 
     _request('https://api.coinmarketcap.com/v1/ticker/flappycoin/?convert=USD', function(err, data) {
-      if (!err) bitstampRate = parseFloat(JSON.parse(data).price_usd);
+      if (!err) p = data.replace('[', '').replace(']', '');
+      bitstampRate = parseFloat(JSON.parse(p).price_usd);
 
       res.jsonp({
         status: 200,
