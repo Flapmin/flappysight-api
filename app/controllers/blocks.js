@@ -81,7 +81,7 @@ var getBlock = function(blockhash, cb) {
  * List of blocks by date
  */
 
-var DFLT_LIMIT=2000;
+var DFLT_LIMIT=1440;
           // in testnet, this number is much bigger, we dont support
           // exploring blocks by date.
 
