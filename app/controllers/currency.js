@@ -50,13 +50,13 @@ exports.index = function(req, res) {
 
       res.jsonp({
         status: 200,
-        data: { bitstamp: bitstampRate }
+        data: { usd: bitstampRate }
       });
     });
   } else {
     res.jsonp({
       status: 200,
-      data: { bitstamp: bitstampRate }
+      data: { usd: bitstampRate }
     });
   }
 };
